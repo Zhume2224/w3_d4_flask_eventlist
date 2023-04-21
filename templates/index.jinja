@@ -2,32 +2,33 @@
 
 {% block content %}
     <h1>Upcoming Events!</h1>
-{# add form here #}
+
+
 <form action='/events',method=post>
 <div>
       <label for="event_name">Event Name:</label>
       <input type="text" name="event_name" id="event_name">  
    
-    <label for="description">Description:</label>
+    <label for="description" >Description:</label>
       <textarea name="description" id="description" rows="2" cols="20"></textarea>
      
       <label for="date" placeholder="YYYY/MM/DD">Event Date:</label>
       <input type="date" id="date" name="date" min="2023-01-01" max="2030-12-31"><br>
      
-      <label for="guest_number">Guest Number:</label> 
+      <label for="guest_number" >Guest Number:</label> 
       <input type="number" name="guest_number" id="guest_number" min=0 max=400>
       
       <label for="room">Room:</label>
       <input type="text" name="room" id="room">
     
-      <label for="recurring">
-      <input type="checkbox" name="recurring" value="true"> Recurring </label><br>
+      <label for="recurring">Recurring?</label>
+      <input type="checkbox" name="recurring" id="recurring"> <br>
   {# <label>
     <input type="checkbox" name="my_property" value="false">
     False
   </label> #}
-     <label for="submit"></label>
-     <input type="submit" name="add_task" value="Add Task">
+     <label for="submit" ></label>
+     <input type="submit" value="Add Task">
      </div>
 </form>
 
